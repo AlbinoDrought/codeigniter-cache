@@ -369,7 +369,7 @@ class Cache
 
 		$file_path = $this->_path.$this->_filename.'.cache';
 
-		if (file_exists($file_path)) unlink($file_path);
+		if (file_exists($file_path)) @unlink($file_path);
 
 		// Reset values
 		$this->_reset();
